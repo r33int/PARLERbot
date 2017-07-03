@@ -50,5 +50,5 @@ async def update_now_playing(self, entry=None, is_paused=False):
     entry = None
   
 
-
-client.run('MzIzOTAwMDI0ODI2MzYzOTI0.DCHImw.hYXxMOQ0JaAlNW0Ma8YfEOb_gPE')
+#Put your token here
+client.run('TOKEN')
