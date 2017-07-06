@@ -17,10 +17,12 @@ async def on_message(message):
     if message.content == 'pdva':
         msg = discord.Embed(title='#PDVA2022', description='Votez pour nous !', url='https://twitter.com/PDVA_officiel', colour=0x93BD43)
         await client.add_reaction(message, '?')
+        msg.set_author(name='@PDVA_officiel', icon_url="https://pbs.twimg.com/profile_images/851500993086967816/1m-V3R9Y.jpg")
         await client.send_message(message.channel, embed=msg)
     if message.content == 'PDVA':
         msg = discord.Embed(title='#PDVA2022', description='Votez pour nous !', url='https://twitter.com/PDVA_officiel', colour=0x93BD43)
         await client.add_reaction(message, '?')
+        msg.set_author(name='@PDVA_officiel', icon_url="https://pbs.twimg.com/profile_images/851500993086967816/1m-V3R9Y.jpg")
         await client.send_message(message.channel, embed=msg)
     if message.content == "ckoil'ip":
         i = random.choice(ip)
@@ -34,9 +36,15 @@ async def on_message(message):
         await client.send_message(message.channel, embed=msg)
     if message.content == "C ki la taup":
         n = random.choice(name)
-        msg = discord.Embed(title="C ki la taup", description="C'EST "+ n +" LA TAUPE", colour=0x1571B0)
         print (n)
+        msg = discord.Embed(title="C ki la taup", description="C'EST "+ n +" LA TAUPE", colour=0x1571B0)
         await client.add_reaction(message, '??')
+        await client.send_message(message.channel, embed=msg)
+    if message.content == "#KebabEuropeen":
+        msg = discord.Embed(title="@benoithamon", description="J'ai craqué. #faim #ZéroRégime", url='https://twitter.com/benoithamon/status/880510699855892480', colour=0x192249)
+        msg.set_image(url="https://pbs.twimg.com/media/DDgz0HeXsAAn6C9.jpg")
+        msg.set_author(name='Benoît Hamon',icon_url='https://i.imgur.com/AX2yZom.png')
+        await client.add_reaction(message, '?')
         await client.send_message(message.channel, embed=msg)
 @client.event
 async def on_ready():
@@ -44,11 +52,6 @@ async def on_ready():
     print(client.user.name)
     print(client.user.id)
     print('------')
-@staticmethod
-async def update_now_playing(self, entry=None, is_paused=False):
-    game = discord.Game(name="Salut")
-    entry = None
-  
 
 #Put your token here
 client.run('TOKEN')
